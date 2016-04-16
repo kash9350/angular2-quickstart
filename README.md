@@ -119,7 +119,7 @@ import {Component} from 'angular2/core';
 export class AppComponent { }
 ```
 
-	> **AppComponent is the root of the application**
+> **AppComponent is the root of the application**
 
 Now we need something to tell Angular to load the root component
 
