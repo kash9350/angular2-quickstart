@@ -233,18 +233,19 @@ npm start
 
 Our final project folder structure looks like this:
 
-
-.
-+-- app
-|   +-- begin-with-the-crazy-ideas.textile
-|   +-- on-simplicity-in-technology.markdown
-+-- node_modules ...
-+-- typings ...
-+-- index.html
-+-- package.json
-+-- styles.css
-+-- tsconfig.json
-+-- typings.json
+```sh
+Your_project_name
+|---app
+|   |---app.component.ts
+|   |---main.ts
+|---node_modules ...
+|---typings ...
+|---index.html
+|---package.json
+|---styles.css
+|---tsconfig.json
+|---typings.json
+```
 
 Now yor first project is Created and All the best for the further Development on Angular 2 Cheer !!
 
