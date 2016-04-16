@@ -234,7 +234,7 @@ npm start
 Our final project folder structure looks like this:
 
 
-.your_project_name
+.
 +-- app
 |   +-- begin-with-the-crazy-ideas.textile
 |   +-- on-simplicity-in-technology.markdown
