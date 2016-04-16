@@ -5,12 +5,12 @@ Angular 2 is in TypeScript
 
 For creating angular 2 project app we need to setup our development environment:
 	
-	- install node and npm
-  	- create and application project folder
-  	- add a tsconfig.json to guide TypeScript Compiler
-  	- add a typings.json that identifies missing  TypeScript definition files
-  	- add a package.json that defines the packages and scripts we need
-  	- install the npm packages and typings files
+- install node and npm
+- create and application project folder
+- add a tsconfig.json to guide TypeScript Compiler
+- add a typings.json that identifies missing  TypeScript definition files
+- add a package.json that defines the packages and scripts we need
+- install the npm packages and typings files
 
 **Install** [node and npm] if not already on your machine.
 
