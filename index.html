@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Angular2-quickstart by kash9350</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">Angular2-quickstart</h1>
+      <h2 class="project-tagline">This repo contain the Running Angular2 quick start app and its instruction how to create angular 2 app</h2>
+      <a href="https://github.com/kash9350/angular2-quickstart" class="btn">View on GitHub</a>
+      <a href="https://github.com/kash9350/angular2-quickstart/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/kash9350/angular2-quickstart/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
+
+    <section class="main-content">
+      <h1>
+<a id="angular2-quickstart" class="anchor" href="#angular2-quickstart" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>angular2-quickstart</h1>
+
+<p>This repo contain the Running Angular2 quick start app and its instruction how to create angular 2 app.</p>
+
+<p>Angular 2 is in TypeScript</p>
+
+<p>For creating angular 2 project app we need to setup our development environment:</p>
+
+<ul>
+<li>install node and npm</li>
+<li>create and application project folder</li>
+<li>add a <code>tsconfig.json</code> to guide TypeScript Compiler</li>
+<li>add a <code>typings.json</code> that identifies missing  TypeScript definition files</li>
+<li>add a <code>package.json</code> that defines the packages and scripts we need</li>
+<li>install the npm packages and typings files</li>
+</ul>
+
+<p><strong>Install</strong> <a href="https://nodejs.org/en/download/">node and npm</a> if not already on your machine.</p>
+
+<p>Create a <strong>new project folder</strong></p>
+
+<div class="highlight highlight-source-shell"><pre>mkdir your_project_name
+<span class="pl-c1">cd</span> your_project_name</pre></div>
+
+<p>Add a <code>tsconfig.json</code> file to the project folder and copy/paste the following:</p>
+
+<div class="highlight highlight-source-shell"><pre>{
+  <span class="pl-s"><span class="pl-pds">"</span>compilerOptions<span class="pl-pds">"</span></span>: {
+    <span class="pl-s"><span class="pl-pds">"</span>target<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>es5<span class="pl-pds">"</span></span>,
+    <span class="pl-s"><span class="pl-pds">"</span>module<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>system<span class="pl-pds">"</span></span>,
+    <span class="pl-s"><span class="pl-pds">"</span>moduleResolution<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>node<span class="pl-pds">"</span></span>,
+    <span class="pl-s"><span class="pl-pds">"</span>sourceMap<span class="pl-pds">"</span></span>: <span class="pl-c1">true</span>,
+    <span class="pl-s"><span class="pl-pds">"</span>emitDecoratorMetadata<span class="pl-pds">"</span></span>: <span class="pl-c1">true</span>,
+    <span class="pl-s"><span class="pl-pds">"</span>experimentalDecorators<span class="pl-pds">"</span></span>: <span class="pl-c1">true</span>,
+    <span class="pl-s"><span class="pl-pds">"</span>removeComments<span class="pl-pds">"</span></span>: <span class="pl-c1">false</span>,
+    <span class="pl-s"><span class="pl-pds">"</span>noImplicitAny<span class="pl-pds">"</span></span>: <span class="pl-c1">false</span>
+  },
+  <span class="pl-s"><span class="pl-pds">"</span>exclude<span class="pl-pds">"</span></span>: [
+    <span class="pl-s"><span class="pl-pds">"</span>node_modules<span class="pl-pds">"</span></span>,
+    <span class="pl-s"><span class="pl-pds">"</span>typings/main<span class="pl-pds">"</span></span>,
+    <span class="pl-s"><span class="pl-pds">"</span>typings/main.d.ts<span class="pl-pds">"</span></span>
+  ]
+}</pre></div>
+
+<p>This <code>tsconfig.json</code> file guides the TypeScript compiler.</p>
+
+<p>Add a <code>typings.json</code> file to the project folder and copy/paste the following:</p>
+
+<div class="highlight highlight-source-shell"><pre>{
+  <span class="pl-s"><span class="pl-pds">"</span>ambientDependencies<span class="pl-pds">"</span></span>: {
+    <span class="pl-s"><span class="pl-pds">"</span>es6-shim<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>github:DefinitelyTyped/DefinitelyTyped/es6-shim/es6-shim.d.ts#7de6c3dd94feaeb21f20054b9f30d5dabc5efabd<span class="pl-pds">"</span></span>,
+    <span class="pl-s"><span class="pl-pds">"</span>jasmine<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>github:DefinitelyTyped/DefinitelyTyped/jasmine/jasmine.d.ts#7de6c3dd94feaeb21f20054b9f30d5dabc5efabd<span class="pl-pds">"</span></span>
+  }
+}</pre></div>
+
+<p>Add a <code>package.json</code> file to the project folder and copy/paste the following:</p>
+
+<div class="highlight highlight-source-shell"><pre>{
+  <span class="pl-s"><span class="pl-pds">"</span>name<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>angular2-quickstart<span class="pl-pds">"</span></span>,
+  <span class="pl-s"><span class="pl-pds">"</span>version<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>1.0.0<span class="pl-pds">"</span></span>,
+  <span class="pl-s"><span class="pl-pds">"</span>scripts<span class="pl-pds">"</span></span>: {
+    <span class="pl-s"><span class="pl-pds">"</span>start<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>tsc &amp;&amp; concurrently <span class="pl-cce">\"</span>npm run tsc:w<span class="pl-cce">\"</span> <span class="pl-cce">\"</span>npm run lite<span class="pl-cce">\"</span> <span class="pl-pds">"</span></span>,    
+    <span class="pl-s"><span class="pl-pds">"</span>tsc<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>tsc<span class="pl-pds">"</span></span>,
+    <span class="pl-s"><span class="pl-pds">"</span>tsc:w<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>tsc -w<span class="pl-pds">"</span></span>,
+    <span class="pl-s"><span class="pl-pds">"</span>lite<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>lite-server<span class="pl-pds">"</span></span>,
+    <span class="pl-s"><span class="pl-pds">"</span>typings<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>typings<span class="pl-pds">"</span></span>,
+    <span class="pl-s"><span class="pl-pds">"</span>postinstall<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>typings install<span class="pl-pds">"</span></span> 
+  },
+  <span class="pl-s"><span class="pl-pds">"</span>license<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>ISC<span class="pl-pds">"</span></span>,
+  <span class="pl-s"><span class="pl-pds">"</span>dependencies<span class="pl-pds">"</span></span>: {
+    <span class="pl-s"><span class="pl-pds">"</span>angular2<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>2.0.0-beta.13<span class="pl-pds">"</span></span>,
+    <span class="pl-s"><span class="pl-pds">"</span>systemjs<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>0.19.25<span class="pl-pds">"</span></span>,
+    <span class="pl-s"><span class="pl-pds">"</span>es6-shim<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>^0.35.0<span class="pl-pds">"</span></span>,
+    <span class="pl-s"><span class="pl-pds">"</span>reflect-metadata<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>0.1.2<span class="pl-pds">"</span></span>,
+    <span class="pl-s"><span class="pl-pds">"</span>rxjs<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>5.0.0-beta.2<span class="pl-pds">"</span></span>,
+    <span class="pl-s"><span class="pl-pds">"</span>zone.js<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>0.6.6<span class="pl-pds">"</span></span>
+  },
+  <span class="pl-s"><span class="pl-pds">"</span>devDependencies<span class="pl-pds">"</span></span>: {
+    <span class="pl-s"><span class="pl-pds">"</span>concurrently<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>^2.0.0<span class="pl-pds">"</span></span>,
+    <span class="pl-s"><span class="pl-pds">"</span>lite-server<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>^2.1.0<span class="pl-pds">"</span></span>,
+    <span class="pl-s"><span class="pl-pds">"</span>typescript<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>^1.8.9<span class="pl-pds">"</span></span>,
+    <span class="pl-s"><span class="pl-pds">"</span>typings<span class="pl-pds">"</span></span>:<span class="pl-s"><span class="pl-pds">"</span>^0.7.11<span class="pl-pds">"</span></span>
+  }
+}</pre></div>
+
+<p>Install these packages by entering the following npm command in a terminal window (command window in Windows):</p>
+
+<div class="highlight highlight-source-shell"><pre>npm install</pre></div>
+
+<p>Node_modules are imported in you project directory you can see a folder named <code>node_modules</code> in your project directory.</p>
+
+<p>Now we are all set with the environment development. </p>
+
+<p>Let's create a folder to hold our application and add super-simple angular component.</p>
+
+<p><strong>Create an app sub-folder</strong> of the root directory and make it the current directory</p>
+
+<div class="highlight highlight-source-shell"><pre>mkdir app
+<span class="pl-c1">cd</span> app</pre></div>
+
+<p><strong>Add a component file</strong> named app.component.ts and paster the following line:</p>
+
+<div class="highlight highlight-source-shell"><pre>import {Component} from <span class="pl-s"><span class="pl-pds">'</span>angular2/core<span class="pl-pds">'</span></span><span class="pl-k">;</span>
+
+@Component({
+    selector: <span class="pl-s"><span class="pl-pds">'</span>my-app<span class="pl-pds">'</span></span>,
+    template: <span class="pl-s"><span class="pl-pds">'</span>&lt;h1&gt;My First Angular 2 App&lt;/h1&gt;<span class="pl-pds">'</span></span>
+})
+<span class="pl-k">export</span> class AppComponent { }</pre></div>
+
+<blockquote>
+<p><strong>AppComponent is the root of the application</strong></p>
+</blockquote>
+
+<p>Now we need something to tell Angular to load the root component</p>
+
+<p>Add a new file , <code>main.ts</code>, to the <code>app/</code> folder as follows:</p>
+
+<div class="highlight highlight-source-shell"><pre>import {bootstrap}    from <span class="pl-s"><span class="pl-pds">'</span>angular2/platform/browser<span class="pl-pds">'</span></span><span class="pl-k">;</span>
+import {AppComponent} from <span class="pl-s"><span class="pl-pds">'</span>./app.component<span class="pl-pds">'</span></span><span class="pl-k">;</span>
+
+bootstrap(AppComponent)<span class="pl-k">;</span></pre></div>
+
+<p>Navigate to the <strong>project root folder</strong>.</p>
+
+<div class="highlight highlight-source-shell"><pre><span class="pl-c1">cd</span> ..</pre></div>
+
+<p>Create an <code>index.html</code> file in this root folder and paste the following lines:</p>
+
+<div class="highlight highlight-source-shell"><pre><span class="pl-k">&lt;</span>html<span class="pl-k">&gt;</span>
+  <span class="pl-k">&lt;</span>head<span class="pl-k">&gt;</span>
+    <span class="pl-k">&lt;</span>title<span class="pl-k">&gt;</span>Angular 2 QuickStart<span class="pl-k">&lt;</span>/title<span class="pl-k">&gt;</span>
+    <span class="pl-k">&lt;</span>meta name=<span class="pl-s"><span class="pl-pds">"</span>viewport<span class="pl-pds">"</span></span> content=<span class="pl-s"><span class="pl-pds">"</span>width=device-width, initial-scale=1<span class="pl-pds">"</span></span><span class="pl-k">&gt;</span>    
+    <span class="pl-k">&lt;</span>link rel=<span class="pl-s"><span class="pl-pds">"</span>stylesheet<span class="pl-pds">"</span></span> href=<span class="pl-s"><span class="pl-pds">"</span>styles.css<span class="pl-pds">"</span></span><span class="pl-k">&gt;</span>
+
+    <span class="pl-k">&lt;</span><span class="pl-k">!</span>-- 1. Load libraries --<span class="pl-k">&gt;</span>
+    <span class="pl-k">&lt;</span><span class="pl-k">!</span>-- IE required polyfills, <span class="pl-k">in</span> this exact order --<span class="pl-k">&gt;</span>
+    <span class="pl-k">&lt;</span>script src=<span class="pl-s"><span class="pl-pds">"</span>node_modules/es6-shim/es6-shim.min.js<span class="pl-pds">"</span></span><span class="pl-k">&gt;&lt;</span>/script<span class="pl-k">&gt;</span>
+    <span class="pl-k">&lt;</span>script src=<span class="pl-s"><span class="pl-pds">"</span>node_modules/systemjs/dist/system-polyfills.js<span class="pl-pds">"</span></span><span class="pl-k">&gt;&lt;</span>/script<span class="pl-k">&gt;</span>
+    <span class="pl-k">&lt;</span>script src=<span class="pl-s"><span class="pl-pds">"</span>node_modules/angular2/es6/dev/src/testing/shims_for_IE.js<span class="pl-pds">"</span></span><span class="pl-k">&gt;&lt;</span>/script<span class="pl-k">&gt;</span>   
+
+    <span class="pl-k">&lt;</span>script src=<span class="pl-s"><span class="pl-pds">"</span>node_modules/angular2/bundles/angular2-polyfills.js<span class="pl-pds">"</span></span><span class="pl-k">&gt;&lt;</span>/script<span class="pl-k">&gt;</span>
+    <span class="pl-k">&lt;</span>script src=<span class="pl-s"><span class="pl-pds">"</span>node_modules/systemjs/dist/system.src.js<span class="pl-pds">"</span></span><span class="pl-k">&gt;&lt;</span>/script<span class="pl-k">&gt;</span>
+    <span class="pl-k">&lt;</span>script src=<span class="pl-s"><span class="pl-pds">"</span>node_modules/rxjs/bundles/Rx.js<span class="pl-pds">"</span></span><span class="pl-k">&gt;&lt;</span>/script<span class="pl-k">&gt;</span>
+    <span class="pl-k">&lt;</span>script src=<span class="pl-s"><span class="pl-pds">"</span>node_modules/angular2/bundles/angular2.dev.js<span class="pl-pds">"</span></span><span class="pl-k">&gt;&lt;</span>/script<span class="pl-k">&gt;</span>
+
+    <span class="pl-k">&lt;</span><span class="pl-k">!</span>-- 2. Configure SystemJS --<span class="pl-k">&gt;</span>
+    <span class="pl-k">&lt;</span>script<span class="pl-k">&gt;</span>
+      System.config({
+        packages: {        
+          app: {
+            format: <span class="pl-s"><span class="pl-pds">'</span>register<span class="pl-pds">'</span></span>,
+            defaultExtension: <span class="pl-s"><span class="pl-pds">'</span>js<span class="pl-pds">'</span></span>
+          }
+        }
+      })<span class="pl-k">;</span>
+      System.import(<span class="pl-s"><span class="pl-pds">'</span>app/main<span class="pl-pds">'</span></span>)
+            .<span class="pl-k">then</span>(null, console.error.<span class="pl-c1">bind</span>(console))<span class="pl-k">;</span>
+    <span class="pl-k">&lt;</span>/script<span class="pl-k">&gt;</span>
+  <span class="pl-k">&lt;</span>/head<span class="pl-k">&gt;</span>
+
+  <span class="pl-k">&lt;</span><span class="pl-k">!</span>-- 3. Display the application --<span class="pl-k">&gt;</span>
+  <span class="pl-k">&lt;</span>body<span class="pl-k">&gt;</span>
+    <span class="pl-k">&lt;</span>my-app<span class="pl-k">&gt;</span>Loading...<span class="pl-k">&lt;</span>/my-app<span class="pl-k">&gt;</span>
+  <span class="pl-k">&lt;</span>/body<span class="pl-k">&gt;</span>
+<span class="pl-k">&lt;</span>/html<span class="pl-k">&gt;</span></pre></div>
+
+<blockquote>
+<p>The System.import call tells SystemJS to import the main file (main.js ... after transpiling 
+main.ts, remember?). main is where we tell Angular to launch the application. We also catch and 
+log launch errors to the console.</p>
+
+<p>All other modules are loaded upon request either by an import statement or by Angular itself.</p>
+
+<p><strong></strong></p>
+
+<p>When Angular calls the bootstrap function in main.ts, it reads the AppComponent metadata, finds 
+the my-app selector, locates an element tag named my-app, and loads our application between 
+those tags.</p>
+</blockquote>
+
+<p>Styles aren't essential but they're nice and the <code>index.html</code> assumes we have a stylesheet called <code>styles.css</code>.</p>
+
+<p>Create a <code>styles.css</code> in the root folder and start styling, perhaps with this set:</p>
+
+<div class="highlight highlight-source-shell"><pre>/<span class="pl-k">*</span> Master Styles <span class="pl-k">*</span>/
+h1 {
+  color: <span class="pl-c">#369; </span>
+  font-family: Arial, Helvetica, sans-serif<span class="pl-k">;</span>   
+  font-size: 250%<span class="pl-k">;</span>
+}
+h2, h3 { 
+  color: <span class="pl-c">#444;</span>
+  font-family: Arial, Helvetica, sans-serif<span class="pl-k">;</span>   
+  font-weight: lighter<span class="pl-k">;</span>
+}
+body { 
+  margin: 2em<span class="pl-k">;</span> 
+}
+body, input[text], button { 
+  color: <span class="pl-c">#888; </span>
+  font-family: Cambria, Georgia<span class="pl-k">;</span> 
+}
+
+/<span class="pl-k">*</span> 
+ <span class="pl-k">*</span> See https://github.com/angular/angular.io/blob/master/public/docs/_examples/styles.css
+ <span class="pl-k">*</span> <span class="pl-k">for</span> the full <span class="pl-c1">set</span> of master styles used by the documentation samples
+ <span class="pl-k">*</span>/</pre></div>
+
+<h3>
+<a id="compile-and-run" class="anchor" href="#compile-and-run" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Compile and run</h3>
+
+<div class="highlight highlight-source-shell"><pre>npm start</pre></div>
+
+<h3>
+<a id="final-structure" class="anchor" href="#final-structure" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Final Structure</h3>
+
+<p>Our final project folder structure looks like this:</p>
+
+<div class="highlight highlight-source-shell"><pre>Your_project_name
+<span class="pl-k">|</span>---app
+<span class="pl-k">|</span>   <span class="pl-k">|</span>---app.component.ts
+<span class="pl-k">|</span>   <span class="pl-k">|</span>---main.ts
+<span class="pl-k">|</span>---node_modules ...
+<span class="pl-k">|</span>---typings ...
+<span class="pl-k">|</span>---index.html
+<span class="pl-k">|</span>---package.json
+<span class="pl-k">|</span>---styles.css
+<span class="pl-k">|</span>---tsconfig.json
+<span class="pl-k">|</span>---typings.json</pre></div>
+
+<p>Now yor first project is Created and All the best for the further Development on Angular 2 Cheer !!</p>
+
+<p>For more info, tutorial and docs visit <a href="https://angular.io/docs/ts/latest/">Angular2 doc</a>. </p>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/kash9350/angular2-quickstart">Angular2-quickstart</a> is maintained by <a href="https://github.com/kash9350">kash9350</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+  
+  </body>
+</html>
