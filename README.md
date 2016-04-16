@@ -7,9 +7,9 @@ For creating angular 2 project app we need to setup our development environment:
 	
 - install node and npm
 - create and application project folder
-- add a tsconfig.json to guide TypeScript Compiler
-- add a typings.json that identifies missing  TypeScript definition files
-- add a package.json that defines the packages and scripts we need
+- add a `tsconfig.json` to guide TypeScript Compiler
+- add a `typings.json` that identifies missing  TypeScript definition files
+- add a `package.json` that defines the packages and scripts we need
 - install the npm packages and typings files
 
 **Install** [node and npm] if not already on your machine.
@@ -253,4 +253,5 @@ For more info, tutorial and docs visit [Angular2 doc].
 
 [node and npm]: <https://nodejs.org/en/download/>
 [Angular2 doc]: <https://angular.io/docs/ts/latest/>
+[tsconfig.json]: <#tsconfig>
 
